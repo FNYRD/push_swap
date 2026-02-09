@@ -1,5 +1,0 @@
-Punto de situacion:
-
-Ya las funciones generales funcionan.
-Ahora hay que diseñar el algoritmo:
-
