@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parser.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jericard <jericard@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/09 16:23:34 by jericard          #+#    #+#             */
+/*   Updated: 2026/02/09 16:23:35 by jericard         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static long	ft_atoi_modified(const char *nptr)
@@ -25,7 +37,16 @@ static long	ft_atoi_modified(const char *nptr)
 	return ((ret * signal));
 }
 
-int *parsed_array(char **matriz, int index)
+static void	less_lines(char **matriz, int *new_array, int is_argv)
+{
+	free_int_array(new_array);
+	if (is_argv)
+		ft_exit(NULL);
+	else
+		ft_exit(matriz);
+}
+
+int	*parsed_array(char **matriz, int index)
 {
 	int		*new_array;
 	int		len;
@@ -44,13 +65,7 @@ int *parsed_array(char **matriz, int index)
 	{
 		test = ft_atoi_modified(matriz[index++]);
 		if (test > INT_MAX || test < INT_MIN)
-		{
-			free_int_array(new_array);
-			if (is_argv)
-				ft_exit(NULL);
-			else
-				ft_exit(matriz);
-		}
+			less_lines(matriz, new_array, is_argv);
 		new_array[i] = (int)test;
 		i++;
 	}

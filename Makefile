@@ -5,11 +5,10 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jericard <jericard@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/01/23 21:22:20 by jericard          #+#    #+#              #
-#    Updated: 2026/01/23 21:22:23 by jericard         ###   ########.fr        #
+#    Created: 2026/02/09 18:08:32 by jericard          #+#    #+#              #
+#    Updated: 2026/02/09 18:08:34 by jericard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 NAME = push_swap
 # BONUS_NAME = checker
@@ -41,6 +40,7 @@ SRCS =	$(SRCS_DIR)/main.c \
 		$(SRCS_DIR)/rotate.c \
 		$(SRCS_DIR)/rotate_reverse.c \
 		$(SRCS_DIR)/targets.c \
+		$(SRCS_DIR)/costs.c \
 
 OBJS = $(SRCS:.c=.o)
 
@@ -77,4 +77,5 @@ fclean: clean
 re: fclean all
 
 .PHONY: all bonus clean fclean re
+
 .SILENT:

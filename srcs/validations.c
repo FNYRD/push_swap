@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   validations.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jericard <jericard@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/09 16:24:51 by jericard          #+#    #+#             */
+/*   Updated: 2026/02/09 16:24:53 by jericard         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static int	ft_isvalid(int c, int next)
@@ -19,7 +31,7 @@ int	matriz_len(char **matriz, int index)
 	int	len;
 
 	len = 0;
-	while(matriz[len])
+	while (matriz[len])
 		len++;
 	if (index == 1)
 		len--;

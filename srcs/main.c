@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jericard <jericard@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/09 16:23:06 by jericard          #+#    #+#             */
+/*   Updated: 2026/02/09 16:23:08 by jericard         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static	int	*twoargs(char **matriz, int len)
@@ -45,7 +57,7 @@ int	main(int argc, char **argv)
 		matriz = ft_split(argv[1], ' ');
 		if (!matriz)
 			ft_exit(NULL);
-		len = matriz_len(matriz, 0);			
+		len = matriz_len(matriz, 0);
 		new_array = twoargs(matriz, len);
 	}
 	else if (argc > 2)
@@ -59,8 +71,6 @@ int	main(int argc, char **argv)
 		processor(new_array, len);
 	return (0);
 }
-
-
 // int		i;//BORRAR
 // i = -1;//BORRAR
 // while (++i < matriz_len(argv, 1))//BORRAR
