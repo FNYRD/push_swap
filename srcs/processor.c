@@ -12,55 +12,6 @@
 
 #include "push_swap.h"
 
-static	void	print_helper(int *stack_a, int *top_a, int tail, int *stack_b, int *top_b)
-{
-	int topf;
-	int topf2;
-	int i;
-
-	i = 0;
-	topf = *top_a;
-	topf2 = *top_b;
-	ft_printf("\n");
-	while (i <= tail)
-	{
-		if(topf <= tail)
-			ft_printf("%d", stack_a[topf]);
-		else
-			ft_printf(" "); 
-		ft_printf("   ");  
-		if (topf2 <= tail)
-			ft_printf("%d", stack_b[topf2]);
-		ft_printf("\n"); 
-		topf++;
-		topf2++;
-		i++;
-	}
-	ft_printf("\n");
-}
-
-static void    print_test(int  *stack_a, int *top_a,  int *stack_b, int *top_b, int tail, int len)
-{
-	(void)len;
-	ft_printf("%d\n", tail);
-	ft_printf("Antes\n");
-	int i = 0;
-	print_helper(stack_a,top_a, tail, stack_b, top_b);
-	ft_printf("Push 3 numero de a para b\n");
-	while (i++ < 4)
-		pb(stack_a, top_a,  stack_b, top_b);
-	print_helper(stack_a,top_a, tail, stack_b, top_b);
-	ft_printf("target A: %d\n", stack_b[(fnd_target_a(stack_a[*top_a], stack_b, *top_b, tail))]);
-	ft_printf("target B: %d\n", stack_a[fnd_target_b(stack_b[*top_b], stack_a, *top_a, tail)]);
-	int tops[] = {*top_a, *top_b};
-	none(stack_a, stack_b, tops, tail);
-}
-
-
-
-
-
-
 static	int	*duplicating(int len)
 {
 	int	*array_duplicated;
@@ -118,7 +69,7 @@ void	processor(int *stack_a, int len)
 	//BORRAR
 	int	top_a;
 	int	top_b;
-//BORRAR
+	//BORRAR
 	stack_b = duplicating(len);
 	if (!stack_b)
 	{
@@ -130,6 +81,51 @@ void	processor(int *stack_a, int len)
 	//BORRAR
 	top_a = 0;//REFERENCIA
 	top_b = len;//REFERENCIA
-	print_test(stack_a, &top_a, stack_b, &top_b, len - 1, len);
+	int tops[] = {top_a, top_b};
+	none(stack_a, stack_b, tops, len - 1);
 	//BORRAR
 }
+
+// static	void	print_helper(int *stack_a, int *top_a, int tail, int *stack_b, int *top_b)
+// {
+// 	int topf;
+// 	int topf2;
+// 	int i;
+
+// 	i = 0;
+// 	topf = *top_a;
+// 	topf2 = *top_b;
+// 	ft_printf("\n");
+// 	while (i <= tail)
+// 	{
+// 		if(topf <= tail)
+// 			ft_printf("%d", stack_a[topf]);
+// 		else
+// 			ft_printf(" "); 
+// 		ft_printf("   ");  
+// 		if (topf2 <= tail)
+// 			ft_printf("%d", stack_b[topf2]);
+// 		ft_printf("\n"); 
+// 		topf++;
+// 		topf2++;
+// 		i++;
+// 	}
+// 	ft_printf("\n");
+// }
+
+// static void    print_test(int  *stack_a, int *top_a,  int *stack_b, int *top_b, int tail, int len)
+// {
+// 	(void)len;
+// 	ft_printf("%d\n", tail);
+// 	ft_printf("Antes\n");
+// 	int i = 0;
+// 	print_helper(stack_a,top_a, tail, stack_b, top_b);
+// 	ft_printf("Push 3 numero de a para b\n");
+// 	while (i++ < 9)
+// 		pb(stack_a, top_a,  stack_b, top_b);
+// 	print_helper(stack_a,top_a, tail, stack_b, top_b);
+// 	ft_printf("target A: %d\n", stack_b[(fnd_target_a(stack_a[*top_a], stack_b, *top_b, tail))]);
+// 	ft_printf("target B: %d\n", stack_a[fnd_target_b(stack_b[*top_b], stack_a, *top_a, tail)]);
+// 	int tops[] = {*top_a, *top_b};
+// 	none(stack_a, stack_b, tops, tail);
+// }
