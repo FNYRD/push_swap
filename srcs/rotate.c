@@ -31,7 +31,7 @@ void	ra(int *stack_a, int top_a, int tail, int flag)
 
 void	rb(int *stack_b, int top_b, int tail, int flag)
 {
-	ra(stack_b, top_b, tail, 0);
+	ra(stack_b, top_b, tail, 1);
 	if (!flag)
 		ft_printf("rb\n");
 }

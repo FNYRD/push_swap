@@ -20,12 +20,15 @@
 # include <stdlib.h>
 # include <limits.h>
 
+int     magic(int a, int b, int flag);
 int		matriz_len(char **matriz, int index);
 int		non_duplicate(int *new_array, int len);
 int		*parsed_array(char **matriz, int index);
 int		fnd_target_a(int a, int *b, int tb, int tail);
 int     fnd_target_b(int b, int *a, int ta, int tail);
 int		set_i(int *stack, int top, int tail, int flag);
+int     move(int point_a, int point_b, int line_a, int line_b);
+int     best_costs(int *stack_a, int *stack_b, int *tops, int tail);
 
 void	ft_exit(char **matriz);
 void	free_matriz(char **matriz);

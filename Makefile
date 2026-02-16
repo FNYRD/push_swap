@@ -41,6 +41,7 @@ SRCS =	$(SRCS_DIR)/main.c \
 		$(SRCS_DIR)/rotate_reverse.c \
 		$(SRCS_DIR)/targets.c \
 		$(SRCS_DIR)/costs.c \
+		$(SRCS_DIR)/moving.c \
 
 OBJS = $(SRCS:.c=.o)
 

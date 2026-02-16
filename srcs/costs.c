@@ -43,7 +43,7 @@ int	magic(int a, int b, int flag)
 	return (b);
 }
 
-static	int	move(int point_a, int point_b, int line_a, int line_b)
+int	move(int point_a, int point_b, int line_a, int line_b)
 {
 	if ((point_a == line_a) || (point_b == line_b))
 		return (1);
@@ -54,7 +54,7 @@ static	int	move(int point_a, int point_b, int line_a, int line_b)
 	return (0);
 }
 
-// tengo que disminuir una linea
+// tengo que disminuir una linea de la funcion
 int	best_costs(int *stack_a, int *stack_b, int *tops, int tail)
 {
 	int	target;
@@ -65,7 +65,7 @@ int	best_costs(int *stack_a, int *stack_b, int *tops, int tail)
 
 	best_cost = INT_MAX;
 	best_point = tops[0];
-	point = tops[0];
+	point = tops[0] - 1;
 	total = -1;
 	while (++point <= tail)
 	{

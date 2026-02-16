@@ -1,5 +1,4 @@
 Punto de situacion:
 
-Ya las funciones generales funcionan.
-Ahora hay que diseñar el algoritmo:
-
+ya ordena con pocos numeros pero esta fallo 
+./push_swap 14 2 27 9 33 5 19 41 7 22 11 36 3 25 17 48 8 30 13 39 6 21 44 10 28
