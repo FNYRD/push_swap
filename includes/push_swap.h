@@ -20,22 +20,24 @@
 # include <stdlib.h>
 # include <limits.h>
 
-int     magic(int a, int b, int flag);
+int		magic(int a, int b, int flag);
 int		matriz_len(char **matriz, int index);
 int		non_duplicate(int *new_array, int len);
 int		*parsed_array(char **matriz, int index);
 int		fnd_target_a(int a, int *b, int tb, int tail);
-int     fnd_target_b(int b, int *a, int ta, int tail);
+int		fnd_target_b(int b, int *a, int ta, int tail);
 int		set_i(int *stack, int top, int tail, int flag);
-int     move(int point_a, int point_b, int line_a, int line_b);
-int     best_costs(int *stack_a, int *stack_b, int *tops, int tail);
+int		move(int point_a, int point_b, int line_a, int line_b);
+int		best_costs(int *stack_a, int *stack_b, int *tops, int tail);
 
 void	ft_exit(char **matriz);
 void	free_matriz(char **matriz);
 void	error(char **matriz, int mi);
 void	free_int_array(int *new_array);
+void	order_3(int *stack_a, int top_a);
 void	processor(int *stack_a, int len);
-void	order_3(int *stack_a, int min, int max);
+void	manager(int *stack_a, int *stack_b, int *tops, int tail);
+void	director(int *stack_a, int *stack_b, int *tops, int tail);
 
 void	sa(int *stack_a, int top, int len, int flag);
 void	sb(int *stack_b, int top_b, int len, int flag);
@@ -51,8 +53,5 @@ void	rrr(int *stack_a, int *stack_b, int *tops, int tail);
 
 void	pa(int *stack_a, int *top_a, int *stack_b, int *top_b);
 void	pb(int *stack_a, int *top_a, int *stack_b, int *top_b);
-
-
-void    none(int *stack_a, int *stack_b, int *tops, int tail);
 
 #endif

@@ -1,4 +1,21 @@
 Punto de situacion:
 
-ya ordena con pocos numeros pero esta fallo 
-./push_swap 14 2 27 9 33 5 19 41 7 22 11 36 3 25 17 48 8 30 13 39 6 21 44 10 28
+comenzar a pasar de B para A
+
+
+verificar como es que esta funcion trabaja exactamente ya que fue una auxiliar creada por el chat:
+static int	cost(int pt, int tg, int *tops, int tail)
+{
+	int	la;
+	int	lb;
+	int	ca;
+	int	cb;
+
+	ca = mvs(pt, tops[0], tail);
+	cb = mvs(tg, tops[1], tail);
+	la = magic(tail, tops[0], 2);
+	lb = magic(tail, tops[1], 2);
+	if (move(pt, tg, la, lb))
+		return (magic(ca, cb, 1));
+	return (ca + cb);
+}

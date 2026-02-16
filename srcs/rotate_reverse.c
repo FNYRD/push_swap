@@ -19,9 +19,9 @@ void	rra(int *stack_a, int top_a, int tail, int flag)
 
 	temp = stack_a[tail];
 	i = tail;
-	while (i >= top_a)
+	while (i > top_a)
 	{
-		stack_a[i + 1] = stack_a[i];
+		stack_a[i] = stack_a[i - 1];
 		i--;
 	}
 	stack_a[top_a] = temp;

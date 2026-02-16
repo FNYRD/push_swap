@@ -12,13 +12,13 @@
 
 #include "push_swap.h"
 
-static int	ft_isvalid(int c, int next)
+static int	ft_isvalid(int c, int next, int pos)
 {
 	if ((c >= '0' && c <= '9') || c == '-' || c == '+')
 	{
 		if (c == '-' || c == '+')
 		{
-			if (!(next >= '0' && next <= '9'))
+			if (pos != 0 || !(next >= '0' && next <= '9'))
 				return (0);
 		}
 		return (1);
@@ -76,7 +76,7 @@ void	error(char **matriz, int mi)
 		len = ft_strlen(matriz[mi]);
 		while (i < len)
 		{
-			if (!(ft_isvalid(matriz[mi][i], matriz[mi][i + 1])))
+			if (!(ft_isvalid(matriz[mi][i], matriz[mi][i + 1], i)))
 				ft_exit(to_free);
 			i++;
 		}

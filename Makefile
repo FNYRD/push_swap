@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = push_swap
-# BONUS_NAME = checker
+BONUS_NAME = checker
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
@@ -42,6 +42,7 @@ SRCS =	$(SRCS_DIR)/main.c \
 		$(SRCS_DIR)/targets.c \
 		$(SRCS_DIR)/costs.c \
 		$(SRCS_DIR)/moving.c \
+		$(SRCS_DIR)/director.c \
 
 OBJS = $(SRCS:.c=.o)
 
@@ -56,11 +57,22 @@ $(FT_PRINTF):
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(INCLUDES) $(OBJS) $(LIBFT) $(FT_PRINTF) -o $(NAME)
 
-# bonus: $(LIBFT) $(FT_PRINTF) $(BONUS_NAME)
+BONUS_SRCS = $(SRCS_DIR)/checker.c \
+		$(SRCS_DIR)/checker_ops.c \
+		$(SRCS_DIR)/validations.c \
+		$(SRCS_DIR)/parser.c \
+		$(SRCS_DIR)/out_and_free.c \
+		$(SRCS_DIR)/swaps.c \
+		$(SRCS_DIR)/rotate.c \
+		$(SRCS_DIR)/rotate_reverse.c \
 
-# $(BONUS_NAME): $(BONUS_OBJS)
-# 	$(CC) $(CFLAGS) $(INCLUDES) $(BONUS_OBJS) $(LIBFT) $(FT_PRINTF) -o $(BONUS_NAME)
-# 	@touch .bonus
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+
+bonus: $(LIBFT) $(FT_PRINTF) $(BONUS_NAME)
+
+$(BONUS_NAME): $(BONUS_OBJS)
+	$(CC) $(CFLAGS) $(INCLUDES) $(BONUS_OBJS) $(LIBFT) $(FT_PRINTF) -o $(BONUS_NAME)
+	@touch .bonus
 
 %.o: %.c
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
