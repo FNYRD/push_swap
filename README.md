@@ -78,6 +78,6 @@ The program prints `Error` to stderr in the following cases:
 
 Claude (Anthropic) was used as a consultation tool during the development of this project for the following purposes:
 
-- **Debugging**: Identification of a bug in the rotation direction logic where values were being compared instead of indices, causing unnecessary operations.
+- **Debugging**: Identification of bugs in the logicto reduce unnecessary operations.
 - **Algorithm optimization**: The improvement of leaving 5 elements in stack `a` instead of 3 (sort_5 strategy) was developed with AI assistance to reduce the operation count and consistently meet the 5500-operation limit for 500 numbers.
 - **Code efficiency**: General consultation for analyzing the cost calculation functions and identifying areas where operations could be reduced without restructuring the entire codebase.

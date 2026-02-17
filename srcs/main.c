@@ -65,13 +65,7 @@ int	main(int argc, char **argv)
 		len = matriz_len(argv, 1);
 		new_array = moreargs(argv, len);
 	}
-	if (!new_array)
-		ft_exit(NULL);
-	else
+	if (new_array)
 		processor(new_array, len);
 	return (0);
 }
-// int		i;//BORRAR
-// i = -1;//BORRAR
-// while (++i < matriz_len(argv, 1))//BORRAR
-// 	printf("\n%d", new_array[i]);//BORRAR
