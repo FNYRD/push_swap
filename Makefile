@@ -42,6 +42,7 @@ SRCS =	$(SRCS_DIR)/main.c \
 		$(SRCS_DIR)/targets.c \
 		$(SRCS_DIR)/costs.c \
 		$(SRCS_DIR)/moving.c \
+		$(SRCS_DIR)/sort_five.c \
 		$(SRCS_DIR)/director.c \
 
 OBJS = $(SRCS:.c=.o)

@@ -35,6 +35,7 @@ void	free_matriz(char **matriz);
 void	error(char **matriz, int mi);
 void	free_int_array(int *new_array);
 void	order_3(int *stack_a, int top_a);
+void	sort_5(int *stack_a, int *stack_b, int *tops, int tail);
 void	processor(int *stack_a, int len);
 void	manager(int *stack_a, int *stack_b, int *tops, int tail);
 void	director(int *stack_a, int *stack_b, int *tops, int tail);
