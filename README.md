@@ -68,6 +68,16 @@ The program prints `Error` to stderr in the following cases:
 - Arguments exceeding integer limits
 - Duplicate numbers
 
+## Bonus: Checker
+
+The `checker` program reads a stack and a list of operations from stdin, executes them, and verifies if the result is sorted. It displays `OK` if stack `a` is sorted and stack `b` is empty, `KO` otherwise, or `Error` for invalid input.
+
+```bash
+make bonus                                        # Compile checker
+./push_swap 3 2 1 | ./checker 3 2 1               # Verify push_swap output
+ARG="3 1 2 5 4"; ./push_swap $ARG | ./checker $ARG # With variables
+```
+
 ## Resources
 
 ### References

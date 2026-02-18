@@ -1,44 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate_reverse.c                                   :+:      :+:    :+:   */
+/*   rotate_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jericard <jericard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/09 16:25:23 by jericard          #+#    #+#             */
-/*   Updated: 2026/02/09 16:25:25 by jericard         ###   ########.fr       */
+/*   Created: 2026/02/18 15:34:37 by jericard          #+#    #+#             */
+/*   Updated: 2026/02/18 15:34:39 by jericard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-void	rra(int *stack_a, int top_a, int tail, int flag)
+void	ra(int *stack_a, int top_a, int tail, int flag)
 {
 	int	temp;
 	int	i;
 
-	temp = stack_a[tail];
-	i = tail;
-	while (i > top_a)
+	temp = stack_a[top_a];
+	i = top_a;
+	while (i < tail)
 	{
-		stack_a[i] = stack_a[i - 1];
-		i--;
+		stack_a[i] = stack_a[i + 1];
+		i++;
 	}
-	stack_a[top_a] = temp;
+	stack_a[tail] = temp;
 	if (!flag)
-		ft_printf("rra\n");
+		ft_printf("ra\n");
 }
 
-void	rrb(int *stack_b, int top_b, int tail, int flag)
+void	rb(int *stack_b, int top_b, int tail, int flag)
 {
-	rra(stack_b, top_b, tail, 1);
+	ra(stack_b, top_b, tail, 1);
 	if (!flag)
-		ft_printf("rrb\n");
+		ft_printf("rb\n");
 }
 
-void	rrr(int *stack_a, int *stack_b, int *tops, int tail)
+void	rr(int *stack_a, int *stack_b, int *tops, int tail)
 {
-	rra(stack_a, tops[0], tail, 1);
-	rrb(stack_b, tops[1], tail, 1);
-	ft_printf("rrr\n");
+	ra(stack_a, tops[0], tail, 1);
+	rb(stack_b, tops[1], tail, 1);
+	ft_printf("rr\n");
 }

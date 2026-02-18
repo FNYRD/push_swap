@@ -29,6 +29,7 @@ FT_PRINTF_INCLUDES = -I./ft_printf
 INCLUDES = -I./includes $(LIBFT_INCLUDES) $(FT_PRINTF_INCLUDES)
 
 SRCS_DIR = ./srcs
+BNS_DIR = ./bns
 
 SRCS =	$(SRCS_DIR)/main.c \
 		$(SRCS_DIR)/validations.c \
@@ -58,14 +59,14 @@ $(FT_PRINTF):
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(INCLUDES) $(OBJS) $(LIBFT) $(FT_PRINTF) -o $(NAME)
 
-BONUS_SRCS = $(SRCS_DIR)/checker.c \
-		$(SRCS_DIR)/checker_ops.c \
-		$(SRCS_DIR)/validations.c \
-		$(SRCS_DIR)/parser.c \
-		$(SRCS_DIR)/out_and_free.c \
-		$(SRCS_DIR)/swaps.c \
-		$(SRCS_DIR)/rotate.c \
-		$(SRCS_DIR)/rotate_reverse.c \
+BONUS_SRCS = $(BNS_DIR)/checker_bonus.c \
+		$(BNS_DIR)/checker_ops_bonus.c \
+		$(BNS_DIR)/validations_bonus.c \
+		$(BNS_DIR)/parser_bonus.c \
+		$(BNS_DIR)/out_and_free_bonus.c \
+		$(BNS_DIR)/swaps_bonus.c \
+		$(BNS_DIR)/rotate_bonus.c \
+		$(BNS_DIR)/rotate_reverse_bonus.c \
 
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 

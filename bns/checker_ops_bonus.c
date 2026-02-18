@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_ops.c                                      :+:      :+:    :+:   */
+/*   checker_ops_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jericard <jericard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/16 18:00:00 by jericard          #+#    #+#             */
-/*   Updated: 2026/02/16 18:00:00 by jericard         ###   ########.fr       */
+/*   Created: 2026/02/18 15:33:34 by jericard          #+#    #+#             */
+/*   Updated: 2026/02/18 15:33:37 by jericard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 int	read_line(char *buf, int size)
 {
@@ -70,7 +70,7 @@ static int	exec_rot(char *op, int *a, int *b, int *tops)
 	if (ft_strncmp(op, "rrr", 4) == 0)
 	{
 		rra(a, tops[0], tail, 1);
-		rra(b, tops[1], tail, 1);
+		rrb(b, tops[1], tail, 1);
 	}
 	else if (ft_strncmp(op, "rra", 4) == 0)
 		rra(a, tops[0], tail, 1);
@@ -79,7 +79,7 @@ static int	exec_rot(char *op, int *a, int *b, int *tops)
 	else if (ft_strncmp(op, "rr", 3) == 0)
 	{
 		ra(a, tops[0], tail, 1);
-		ra(b, tops[1], tail, 1);
+		rb(b, tops[1], tail, 1);
 	}
 	else if (ft_strncmp(op, "ra", 3) == 0)
 		ra(a, tops[0], tail, 1);

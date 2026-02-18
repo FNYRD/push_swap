@@ -1,20 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   checker_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jericard <jericard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/16 18:00:00 by jericard          #+#    #+#             */
-/*   Updated: 2026/02/16 18:00:00 by jericard         ###   ########.fr       */
+/*   Created: 2026/02/18 15:33:16 by jericard          #+#    #+#             */
+/*   Updated: 2026/02/18 15:33:18 by jericard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-int		exec_op(char *op, int *a, int *b, int *tops);
-int		read_line(char *buf, int size);
-int		is_sorted_chk(int *stack, int top, int tail);
+#include "push_swap_bonus.h"
 
 static void	checker_error(int *a, int *b)
 {
@@ -52,7 +48,7 @@ static void	run_checker(int *a, int len)
 	free(b);
 }
 
-static int	*parse_two(char **matriz, int len)
+static int	*twoargs(char **matriz, int len)
 {
 	int	*new_array;
 
@@ -69,7 +65,7 @@ static int	*parse_two(char **matriz, int len)
 	return (new_array);
 }
 
-static int	*parse_more(char **argv, int len)
+static int	*moreargs(char **argv, int len)
 {
 	int	*new_array;
 
@@ -98,12 +94,12 @@ int	main(int argc, char **argv)
 		if (!matriz)
 			ft_exit(NULL);
 		len = matriz_len(matriz, 0);
-		new_array = parse_two(matriz, len);
+		new_array = twoargs(matriz, len);
 	}
 	else if (argc > 2)
 	{
 		len = matriz_len(argv, 1);
-		new_array = parse_more(argv, len);
+		new_array = moreargs(argv, len);
 	}
 	if (!new_array)
 		return (0);

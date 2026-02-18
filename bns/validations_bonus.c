@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validations.c                                      :+:      :+:    :+:   */
+/*   validations_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jericard <jericard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/09 16:24:51 by jericard          #+#    #+#             */
-/*   Updated: 2026/02/09 16:24:53 by jericard         ###   ########.fr       */
+/*   Created: 2026/02/18 15:34:57 by jericard          #+#    #+#             */
+/*   Updated: 2026/02/18 15:34:58 by jericard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 static int	ft_isvalid(int c, int next, int pos)
 {
