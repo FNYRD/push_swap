@@ -88,7 +88,7 @@ fclean: clean
 	$(MAKE) fclean -C $(LIBFT_DIR)
 	$(MAKE) fclean -C $(FT_PRINTF_DIR)
 	$(RM) $(NAME) $(BONUS_NAME) .bonus
-#Hay un problema porque no borra los objetos anteriores
+
 re: fclean all
 
 .PHONY: all bonus clean fclean re
